@@ -1,0 +1,101 @@
+:root{
+    --bubbleWidth:10vw;
+    --bubbleHeight:10vw;
+    --bubbleRadius:7vw;
+    --cornerOffset: 13vw;
+    --bubbleGap: 8vw;
+    --bubbleColor:cornflowerblue;
+    --bubbleText:aliceblue;
+    --optionWidth:5vw;
+    --expandedWidth:7vw;
+    --expandedCurve:7vw;
+    --expandedPadding:1px;
+    --icon1:url("icons/heart.png");
+    --icon2:url("icons/contact.png");
+    --icon3:url("icons/search.png");
+    --icon4:url("icons/help.png");
+    --icon5:url("icons/cog.png");
+}
+
+
+.bubble{
+    background-color:var(--bubbleColor);
+    color:var(--bubbleText);
+    height:var(--bubbleHeight);
+    width:var(--bubbleWidth);
+    position:absolute;
+    border-radius:var(--bubbleRadius);
+    display:flex;
+    flex:auto;
+    border:4px solid var(--bubbleColor);
+    background-size:cover;
+}
+
+.hamburger{
+    position:absolute;
+    top:calc(100vh - var(--cornerOffset) - var(--bubbleWidth));
+    left:calc(100vw - var(--cornerOffset) - var(--bubbleWidth));
+    background-image:url("icons/menu.png");
+    background-size:cover;
+    border:4px solid var(--bubbleColor);
+}
+
+.zerodeg{
+    bottom:calc(0*(var(--bubbleGap) + var(--bubbleWidth)));
+    right:calc(1*(var(--bubbleGap) +  var(--bubbleWidth)));
+    background-image:var(--icon1);
+
+}
+
+.twentytwodeg{
+    bottom:calc(0.38*(var(--bubbleGap) + var(--bubbleWidth)));
+    right:calc(0.92*(var(--bubbleGap) + var(--bubbleWidth)));
+    background-image:var(--icon2);
+}
+
+.thirtydeg{
+    bottom:calc(0.5*(var(--bubbleGap) + var(--bubbleWidth)));
+    right:calc(0.85*(var(--bubbleGap) + var(--bubbleWidth)));
+    background-image:var(--icon2);
+}
+
+.fortyfivedeg{
+    bottom:calc(0.7*(var(--bubbleGap) + var(--bubbleWidth)));
+    right:calc(0.7*(var(--bubbleGap) + var(--bubbleWidth)));
+    background-image:var(--icon3);
+}
+
+.sixtydeg{
+    bottom:calc((1.73/2)*(var(--bubbleGap) + var(--bubbleWidth)));
+    right:calc(0.5*(var(--bubbleGap) + var(--bubbleWidth)));
+    background-image:var(--icon4);
+}
+
+.sixtysevendeg{
+    bottom:calc(0.92*(var(--bubbleGap) + var(--bubbleWidth)));
+    right:calc(0.38*(var(--bubbleGap) + var(--bubbleWidth)));
+    background-image:var(--icon4);
+}
+
+.ninetydeg{
+    bottom:calc(1*(var(--bubbleGap) + var(--bubbleWidth)));
+    right:calc(0*(var(--bubbleGap) +  var(--bubbleWidth)));
+    background-image:var(--icon5);
+}
+
+.hidden{
+    display:none;
+}
+
+.option{
+    width:var(--optionWidth);
+    height:var(--optionWidth);
+}
+
+.option:hover{
+    height:var(--expandedWidth);
+    width:var(--expandedWidth);
+    border-radius:var(--expandedCurve);
+    padding:var(--expandedPadding);
+    z-index:1;
+}
